@@ -2,8 +2,8 @@
 Feature: Credit Card
 
   Scenario Outline: Credit Card number gets cleanned up
-    Given Credit card with number of <raw_number>
-    Then Credit card number is <number>
+    Given Credit card with number: <raw_number>
+    Then Credit card number is: <number>
 
     Examples:
       | raw_number          | number           | description |
@@ -14,10 +14,10 @@ Feature: Credit Card
       | 4111_1111_1111_1111 | 4111111111111111 | underscores |
 
   Scenario Outline: Credit Card type and valid
-    Given Credit card with number of <number>
-    Then Credit card type is <type>
+    Given Credit card with number: <number>
+    Then Credit card type is: <type>
     And Credit card is valid? <valid>
-    And Credit card output is <type>: <number> (<valid>)
+    And Credit card output is: <type>: <number> (<valid>)
 
     Examples:
       | number            | type       | valid   | description                  |

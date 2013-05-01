@@ -30,7 +30,6 @@ class CreditCard
   def output
     "#{type}: #{@number} (#{valid? ? 'valid' : 'invalid'})"
   end
-
 end
 
 class Integer
