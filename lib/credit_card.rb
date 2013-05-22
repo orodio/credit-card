@@ -1,5 +1,5 @@
 class CreditCard
-  attr_accessor :number
+  attr_reader :number
 
   def initialize number
     @number = number.to_s.gsub(/[^0-9]/,'')
